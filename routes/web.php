@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 
+//Inventarío cafetería
 use App\Http\Controllers\Producto\ProductoController;
 use App\Http\Controllers\Producto\TipoproductoController;
 use App\Http\Controllers\Producto\ProveedorController;
@@ -21,7 +22,7 @@ use App\Http\Livewire\Cruds\Productos\Reportefechapdf;
 use App\Http\Livewire\Cruds\Entradas\Entradaexcel;
 use App\Http\Livewire\Cruds\Salidas\Salidaexcel;
 
-//Inventarío papelerías
+//Inventarío papelería
 use App\Http\Controllers\Papeleria\PapeleriaProductoController;
 use App\Http\Controllers\Papeleria\PapeleriaTipoProductoController;
 use App\Http\Controllers\Papeleria\PapeleriaEntradaController;
