@@ -1,7 +1,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'Productos papeleria')
+@section('title', 'Productos papelería')
 
 @section('content_header')
 
