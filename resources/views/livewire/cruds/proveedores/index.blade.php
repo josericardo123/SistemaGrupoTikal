@@ -141,7 +141,7 @@
         </div>
          @else
              <div class="card-body">
-                 <strong>No existe ningún registro de entradas</strong>
+                 <strong>No existe ningún registro de proveedores</strong>
              </div>
          @endif
     </div>

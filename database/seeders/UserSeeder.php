@@ -16,16 +16,16 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'José Ricardo Cauich Mis',
-            'email' => 'josericardocauichmis@gmail.com',
+            'email' => 'ricardo.cauich@tecnobytepeninsula.com',
             'imagen' => '',
-            'password' => bcrypt('miscauich')
+            'password' => bcrypt('Peninsula#2')
         ])->assignRole('SuperAdmin');
 
         User::create([
-            'name' => 'Julio Enrique Cauich Mis',
-            'email' => 'julioenriquecauichmis@gmail.com',
+            'name' => 'Jorge Alfredo Cabañas Sandoval',
+            'email' => 'direccion@tecnobytepeninsula.com',
             'imagen' => '',
-            'password' => bcrypt('miscauich123')
+            'password' => bcrypt('Peninsula1234#')
         ])->assignRole('RolSinPermisos');
     }
 }
