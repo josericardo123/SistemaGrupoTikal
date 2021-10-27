@@ -162,7 +162,7 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label for="tipo_produto_id">Proveedor:</label>
+                                <label for="">Proveedor:</label>
                                 <select wire:model="proveedor" class="form-control" style="text-transform:uppercase;">
                                     <option value="">Seleccione...</option>
                                     @foreach($proveedores as $item)
@@ -170,10 +170,23 @@
                                     @endforeach
                                 </select>
     
-                                @error('tipo_producto_id')
+                                @error('proveedor')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
+                            {{--<div class="form-group">
+                                <label for="proveedor">Proveedor:</label>
+                                    <input type="text" list="datos" class="form-control">
+                                    <datalist wire:model="proveedor" id="datos">
+                                        <option value="">Seleccione...</option>
+                                        @foreach($proveedores as $item)
+                                            <option value="{{ $item->nombre }}">
+                                        @endforeach
+                                    </datalist>
+                                @error('proveedor')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>--}}
                         </div>
 
                     </div>
