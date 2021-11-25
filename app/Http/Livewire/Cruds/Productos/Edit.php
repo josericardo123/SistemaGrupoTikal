@@ -195,7 +195,6 @@ class Edit extends Component
 
     public function render()
     {
-
         $now = Carbon::now();
         $tipoproductos = Tipoproducto::all();
         $proveedores = Proveedor::all();
