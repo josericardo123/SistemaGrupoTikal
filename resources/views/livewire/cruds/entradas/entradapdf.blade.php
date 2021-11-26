@@ -171,7 +171,7 @@
             <th class="desc">FECHA</th>
             <th>HORA</th>
             <th>PRODUCTO</th>
-            <th>PROVEEDOR</th>
+            {{--<th>PROVEEDOR</th>--}}
             <th>ENTRADAS</th>
             <th>PRECIO</th>
           </tr>
@@ -183,7 +183,7 @@
                 <td class="desc">{{ $item->fecha }}</td>
                 <td class="unit">{{ $item->hora }}</td>
                 <td class="total">{{ $item->nombre_producto }}</td>
-                <th class="service">{{ $item->nombre }}</th>
+                {{--<th class="service">{{ $item->nombre }}</th>--}}
                 <td>{{ $item->cantidad_entrada }}</td>
                 <td>{{ $item->precio }}</td>
 

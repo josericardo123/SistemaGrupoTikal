@@ -129,7 +129,9 @@ class Edit extends Component
 
         $this->restar_producto_salida = ((int)$producto->total - (int)$this->cantidad_salida);
 
-        if($this->cantidad_entrada && $this->cantidad_salida  != ''){
+        if($this->cantidad_entrada == '' && $this->cantidad_salida == ''){
+            session()->flash('alert-danger', "Es necesario ingresar la cantidad en un campo especifico 'Entrada ó Salida'");
+        }else if($this->cantidad_entrada && $this->cantidad_salida  != ''){
             session()->flash('alert-warning', 'Solo puedes ingresar una cantidad en uno de los dos campos "Cantidad de entradas" ó "Cantida de salidas"'); 
             
             $this->reset([

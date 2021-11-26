@@ -26,6 +26,6 @@ class UserSeeder extends Seeder
             'email' => 'direccion@tecnobytepeninsula.com',
             'imagen' => '',
             'password' => bcrypt('Peninsula1234#')
-        ])->assignRole('RolSinPermisos');
+        ])->assignRole('SuperAdmin');
     }
 }

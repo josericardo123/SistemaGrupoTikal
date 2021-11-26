@@ -15,7 +15,7 @@
                 <th >Fecha</th>
                 <th>Hora</th>
                 <th >Producto</th>
-                <th>Proveedor</th>
+                {{--<th>Proveedor</th>--}}
                 <th >Cantidad (Entrada)</th>
                 <th >Precio</th>
             </tr>
@@ -27,7 +27,7 @@
                     <td>{{ $item->fecha }}</td>
                     <td>{{ $item->hora }}</td>
                     <td>{{ $item->nombre_producto }}</td>
-                    <td>{{ $item->nombre }}</td>
+                    {{--<td>{{ $item->nombre }}</td>--}}
                     <td>{{ $item->cantidad_entrada }}</td>
                     <td>${{ $item->precio }}</td>
                 </tr>
