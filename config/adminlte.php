@@ -292,10 +292,10 @@ return [
                     'route'  => 'admin.productos.index',
                     'can' => 'admin.productos.index'
                 ],
-                [
+                /*[
                     'text' => 'Proveedores',
                     'route' => 'admin.proveedores.index',
-                ],
+                ],*/
                 /*[
                     'text' => 'Salida de productos',
                     'route' => 'admin.salidas.index',

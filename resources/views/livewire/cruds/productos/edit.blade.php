@@ -160,8 +160,18 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div  class="col-sm-4">
                             <div class="form-group">
+                                <label for="">Cantidad salida del producto:</label>
+                                <input type="number" class="form-control" wire:model="cantidad_salida">
+    
+                                @error('cantidad_salida')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            {{--<div class="form-group">
                                 <label for="">Proveedor:</label>
                                 <select wire:model="proveedor" class="form-control" style="text-transform:uppercase;">
                                     <option value="">Seleccione...</option>
@@ -173,7 +183,7 @@
                                 @error('proveedor')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
-                            </div>
+                            </div>--}}
                             {{--<div class="form-group">
                                 <label for="proveedor">Proveedor:</label>
                                     <input type="text" list="datos" class="form-control">
@@ -191,7 +201,7 @@
 
                     </div>
                     <div class="row">
-                        <div  class="col-sm-4">
+                        {{--<div  class="col-sm-4">
                             <div class="form-group">
                                 <label for="">Cantidad salida del producto:</label>
                                 <input type="number" class="form-control" wire:model="cantidad_salida">
@@ -200,7 +210,7 @@
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
-                        </div>
+                        </div>--}}
                     </div>
 
                     <div class="mt-4">

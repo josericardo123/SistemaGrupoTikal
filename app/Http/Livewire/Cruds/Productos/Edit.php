@@ -36,7 +36,7 @@ class Edit extends Component
     public $sumar_producto;
 
     public $cantidad_entrada;
-    public $proveedor;
+    //public $proveedor;
 
     public $cantidad_salida;
     public $entradas;
@@ -137,8 +137,11 @@ class Edit extends Component
                 'cantidad_salida'
             ]);
             
-        }else if(is_numeric($this->cantidad_entrada) && $this->cantidad_entrada != ''){
-            if($this->proveedor != ''){
+        }else if($this->cantidad_entrada != ''){
+
+            if(!is_numeric($this->cantidad_entrada)){
+                session()->flash('alert-warning', 'Solo se aceptan números');
+            }else{
                 $producto->update([
                     'entradas' => $this->sumar_producto,
                     'total'=> $this->sumar_producto_total
@@ -148,7 +151,6 @@ class Edit extends Component
                     'fecha' => $fecha_actual,
                     'hora' => $hora_actual,
                     'producto_id' => $this->producto_id,
-                    'proveedor_id' => $this->proveedor,
                     'cantidad_entrada' => $this->cantidad_entrada,
                     'precio' => $this->multiplicar_total
                 ]);
@@ -159,8 +161,6 @@ class Edit extends Component
                 ]);
 
                 session()->flash('alert-success', 'La entrada del producto se registro correctamente, con un total del STOCK igual a: ' . $this->sumar_producto_total. ' productos');
-            }else{
-                session()->flash('alert-warning', 'Seleccioanar proveedor del producto');
             }
         }else if($this->cantidad_salida != ''){
             if(!is_numeric($this->cantidad_salida)){
@@ -197,7 +197,7 @@ class Edit extends Component
     {
         $now = Carbon::now();
         $tipoproductos = Tipoproducto::all();
-        $proveedores = Proveedor::all();
-        return view('livewire.cruds.productos.edit', compact('tipoproductos', 'now', 'proveedores'));
+        //$proveedores = Proveedor::all();
+        return view('livewire.cruds.productos.edit', compact('tipoproductos', 'now'));
     }
 }

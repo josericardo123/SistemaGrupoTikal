@@ -16,7 +16,7 @@ class CreateEntradasTable extends Migration
         Schema::create('entradas', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('producto_id');
-            $table->unsignedBigInteger('proveedor_id');
+            //$table->unsignedBigInteger('proveedor_id');
             $table->string('fecha');
             $table->string('hora');
             $table->integer('cantidad_entrada');
@@ -26,10 +26,10 @@ class CreateEntradasTable extends Migration
                 ->references('id')
                 ->on('productos')
                 ->onDelete('cascade');
-            $table->foreign('proveedor_id')
+            /*$table->foreign('proveedor_id')
                 ->references('id')
                 ->on('proveedors')
-                ->onDelete('cascade');
+                ->onDelete('cascade');*/
             $table->timestamps();
         });
     }
