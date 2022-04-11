@@ -14,11 +14,16 @@ class UserController extends Controller
     public function __construct()
     {
         $this->middleware('can:admin.users.index')->only('index');
+        //$this->middleware('can:admin.users.create')->only('create');
         $this->middleware('can:admin.users.edit')->only('edit', 'update');
     }
     public function index()
     {
         return view('cruds.users.index');
+    }
+
+    public function create(){
+        return view('cruds.users.create');
     }
 
     public function edit(User $user)

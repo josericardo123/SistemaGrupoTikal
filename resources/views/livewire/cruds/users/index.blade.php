@@ -1,8 +1,10 @@
 <div>
    <div class="card">
-
+        <div class="card-header">
+            <a href="{{ route('admin.users.create')}}" class="btn btn-secondary me-2">Agregar nuevo usuario</a>
+        </div>
     <div class="card-header">
-        <input class="form-control" type="search" placeholder="Buscar por nombre del usuario Ó email"
+        <input class="form-control" type="search" placeholder="Buscar por nombre del usuario ó email"
             aria-label="Search" wire:model="search">
     </div>
 

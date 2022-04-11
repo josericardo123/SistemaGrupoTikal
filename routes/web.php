@@ -59,7 +59,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->midd
 Route::group(['middleware' => ['auth']], function(){
     Route::get('profile/username', [UserController::class, 'perfil'])->name('perfil-user');
     Route::post('update/profile', [UserController::class, 'updatePerfil'])->name('update-perfil');
-    Route::resource('users', UserController::class)->only('index', 'edit', 'update')->names('admin.users');
+    Route::resource('users', UserController::class)->only('index', 'edit', 'update', 'create')->names('admin.users');
     Route::resource('roles', RoleController::class)->names('admin.roles');
 
     //Inventario Cafetería
