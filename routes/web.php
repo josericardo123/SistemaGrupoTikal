@@ -101,6 +101,4 @@ Route::group(['middleware' => ['auth']], function(){
     //EXCELL´s inventario pepelería
     Route::get('dounload-papeleria-entradas-excel', [Papeleriaentradaexcel::class, 'papeleriaentradasEXCEL'])->name('reporte-papeleriaentradas.excel');
     Route::get('download-papeleria-salidas-excel', [Papeleriasalidaexcel::class, 'papeleriasalidasEXCEL'])->name('reporte-papeleriasalidas.excel');
-
-
 });
